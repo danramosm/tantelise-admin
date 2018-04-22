@@ -1,0 +1,86 @@
+
+
+<div class="animated fadeIn pt-5">
+
+  <h1 class="mb-4 pb-4 border-bottom">Gestión de productos</h1>
+
+  <div class="row my-5 ">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <canvas id="canvas">{{ chart }}</canvas>  
+    </div>
+  </div>
+
+<div class="row mb-3">
+  <div class="col-12 p-0">
+    <div class="card">
+      <div class="card-body">
+        <input #input type="text" class="form-control" placeholder="Buscar producto..."/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mb-3" *ngIf="cargando">
+  <div class="col-sm-12 p-0">
+    <div class="aler alert-warning text-center">
+      <strong>Cargando...</strong>
+      <br/>
+      <i class="fas fa-sync fa-spin fa-2x"></i>
+      <br/>
+      <span>Espere por favor</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="row mb-3" *ngIf="!cargando">
+  <div class="col-12 p-0">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Productos registrados (<small>{{totalProductos}}</small>) </h3>
+
+        <div class="mb-3">
+            <button type="button" (click)=crearProducto() class="btn btn-primary">Crear producto</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover  ">
+              <thead>
+                <tr>
+                  <th scope="col"><input type="checkbox" name="seleccionarRegistros" /></th>
+                  <th scope="col">Id</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="Col">Estado</th>
+                  <th scope="Col">Editar</th>
+                  <th scope="Col">Eliminar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let producto of productoLista; first as isFirst">
+                  <th><input type="checkbox" name="checkregistros" [value]="producto?.id" /></th>
+                  <th scope="row">{{ producto?.id }}</th>
+                  <td>{{ producto?.nombreProducto  }}</td>
+                  <td>{{ producto?.descripcionProducto }}</td>
+                  <td>{{ producto?.categoriaProducto }}</td>
+                  <td>{{ producto?.estado }}</td>
+                  <td>
+                    <button type="button" (click)=editarProducto(producto) class="btn btn-primary">Editar</button>
+                  </td>
+                  <td>
+                    <button type="button" (click)=eliminarProducto(producto?.id,producto?.nombreProducto) class="btn btn-primary">Eliminar</button>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-editar-producto-modal ></app-editar-producto-modal>
+<app-crear--producto-modal></app-crear--producto-modal>
+  </div>

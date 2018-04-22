@@ -1,3 +1,89 @@
-<p>
-  dashboard works!
-</p>
+<div class="animated fadeIn pt-5">
+
+    <h1 class="mb-4 pb-4 border-bottom">Dashboard</h1>
+  
+    <div class="row mb-5 border-bottom pb-5">
+
+        <div class="card col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="card-body ">
+              <span class="card-title ">{{cantidadProductos}}</span>
+              <p class="card-text">Productos en el catálogo</p>
+              <a class="btn btn-primary" [routerLink]="['/catalogo-productos']"><i class="fas fa-shopping-cart"></i> Catálogo de productos</a>
+            </div>
+            <div class="card-footer text-muted">
+               Última actualización hace 3 días.
+              </div>
+          </div>
+
+          <div class="card col-sm-6 col-md-4 col-lg-3 text-center">
+              <div class="card-body ">
+                <span class="card-title ">10</span>
+                <p class="card-text">Servicios en el catálogo</p>
+                <a class="btn btn-primary" [routerLink]="['/catalogo-servicios']"><i class="fas fa-glass-martini"></i> Gestión de servicios</a>
+              </div>
+              <div class="card-footer text-muted">
+                 Última actualización hace 3 días.
+                </div>
+            </div>
+
+            <div class="card col-sm-6 col-md-4 col-lg-3 text-center">
+                <div class="card-body ">
+                  <span class="card-title ">10</span>
+                  <p class="card-text">Clientes registrados</p>
+                  <a class="btn btn-primary" [routerLink]="['/clientes']"><i class="fas fa-users"></i> Gestión de clientes</a>
+                </div>
+                <div class="card-footer text-muted">
+                   Última actualización hace 3 días.
+                  </div>
+              </div>
+
+              <div class="card col-sm-6 col-md-4 col-lg-3 text-center">
+                  <div class="card-body ">
+                    <span class="card-title ">2</span>
+                    <p class="card-text">Pedidos pendientes</p>
+                    <a class="btn btn-primary" [routerLink]="['/pedidos']"><i class="fas fa-truck"></i> Gestión de pedidos</a>
+                  </div>
+                  <div class="card-footer text-muted">
+                     Última actualización hace 3 días.
+                    </div>
+                </div>
+
+    </div>
+    <div class="row border-bottom pb-5">
+
+      <div class="col-sm-12 col-md-4  ">
+          <h4 class="text-center"> Próximos pedidos</h4>
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Torta de matrimonio</h5>
+                <small>3 days ago</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small>Donec id elit non mi porta.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Productos de cocktail para X</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small class="text-muted">Donec id elit non mi porta.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small class="text-muted">Donec id elit non mi porta.</small>
+            </a>
+          </div>
+    </div> 
+    <div class="col-sm-12 col-md-8 text-center">
+        <h4> Ventas en los últimos 5 meses</h4>
+        <canvas id="canvas" class="graf">{{ chart }}</canvas>  
+      </div>
+  </div>
+</div>
+  

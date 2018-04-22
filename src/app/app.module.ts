@@ -1,32 +1,25 @@
-import { APP_ROUTES } from './app.routes';
+import { privadoModule } from './pages/privado.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
+
+
+import { APP_ROUTES } from './app.routes';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { PagesComponent } from './pages/pages.component';
-import { SharedComponent } from './pages/shared/shared.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { SidebarComponent } from './pages/shared/sidebar/sidebar.component';
-import { HeaderComponent } from './pages/shared/header/header.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PagenotfoundComponent,
-    PagesComponent,
-    SharedComponent,
-    DashboardComponent,
-    SidebarComponent,
-    HeaderComponent
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
-    APP_ROUTES
+    APP_ROUTES,
+    privadoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

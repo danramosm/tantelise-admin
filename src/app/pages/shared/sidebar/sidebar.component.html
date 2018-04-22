@@ -1,3 +1,20 @@
-<p>
-  sidebar works!
-</p>
+<div class="sidebar collapse border-right px-5 " id="collapseExample">
+
+<div class="border-bottom d-inline-flex mb-2 py-4">
+    <img class="rounded-circle mr-2 img-fluid" src="https://picsum.photos/50/50/?image=342" alt="Card image cap">
+    <h3 class="align-self-center">Daniel Ramos</h3>
+</div>
+
+
+<ul>
+  <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/dashboard']"><i class="fas fa-home"></i> Dashboard</a></li>
+  <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/catalogo-productos']"><i class="fas fa-shopping-cart"></i> Catálogo de productos</a></li>
+  <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/catalogo-servicios']"><i class="fas fa-glass-martini"></i> Catálogo de servicios</a></li>
+  <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/pedidos']"><i class="fas fa-truck"></i> Pedidos</a></li>
+  <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/gestion-ventas']"><i class="fas fa-chart-line"></i> Gestión ventas</a></li>
+  <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/clientes']"><i class="fas fa-users"></i> Clientes</a></li>
+  <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/reportes']"><i class="far fa-file-alt"></i> Reportes</a></li>
+</ul>
+
+
+</div>

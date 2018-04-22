@@ -1,3 +1,23 @@
-<p>
-  header works!
-</p>
+<nav class="navbar fixed-top navbar-dark bg-dark border-bottom">
+  <div class="container-fluid">
+      <div class="">
+            <div class="navbar-brand d-inline-flex" href="#">          
+                    <a href="#" class="btn btn-primary d-inline-flex">
+                    <img src="../../../../../assets/img/Logo_502x502_v2.png"  width="42" height="42" class="mr-1" alt="Responsive image"/>
+                  <span class="d-none d-md-block align-self-center ">Tante Lise </span>
+                </a>
+                  <span class="d-block align-self-center ml-2">  
+                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> 
+                     <i class="fas fa-bars"></i>
+                    </a>  
+                  </span>
+                </div> 
+      </div>
+
+        <div class="justify-content-end d-inline-flex border-left pl-2">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="fas fa-home"></i> </a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="fas fa-power-off"></i> </a>
+        </div>
+    </div>
+
+</nav>
